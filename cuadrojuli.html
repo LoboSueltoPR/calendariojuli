@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendario Académico 2024</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f9f9f9;
+        }
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+        .filters {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+        .filter-box {
+            margin: 0 10px;
+            display: flex;
+            align-items: center;
+        }
+        .filter-box label {
+            margin-left: 5px;
+            font-weight: bold;
+        }
+        .checkbox-events {
+            accent-color: #4CAF50; /* Verde */
+        }
+        .checkbox-holidays {
+            accent-color: #f44336; /* Rojo */
+        }
+        .checkbox-important {
+            accent-color: #FFEB3B; /* Amarillo */
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th {
+            background-color: #4CAF50;
+            color: white;
+            text-align: left;
+            padding: 10px;
+        }
+        td {
+            padding: 10px;
+            text-align: left;
+            border: 1px solid #ddd;
+        }
+        .month-header {
+            background-color: #8BC34A;
+            color: white;
+            font-weight: bold;
+            text-align: left;
+            padding: 10px;
+            border: 1px solid #ddd;
+        }
+        .holiday {
+            background-color: #f44336;
+            color: white;
+            font-weight: bold;
+        }
+        .important {
+            background-color: #FFEB3B;
+            font-weight: bold;
+        }
+        .event {
+            background-color: #DFFFD6;
+            color: #333;
+        }
+        .hidden {
+            display: none;
+        }
+    </style>
+    <script>
+        function applyFilters() {
+            const showEvents = document.getElementById('filter-events').checked;
+            const showHolidays = document.getElementById('filter-holidays').checked;
+            const showImportant = document.getElementById('filter-important').checked;
+
+            const rows = document.querySelectorAll('tr');
+
+            rows.forEach(row => {
+                // Always show month headers
+                if (row.classList.contains('month-header')) {
+                    row.classList.remove('hidden');
+                    return;
+                }
+
+                // Show or hide rows based on selected filters
+                const isEvent = row.classList.contains('event');
+                const isHoliday = row.classList.contains('holiday');
+                const isImportant = row.classList.contains('important');
+
+                if (
+                    (showEvents && isEvent) ||
+                    (showHolidays && isHoliday) ||
+                    (showImportant && isImportant)
+                ) {
+                    row.classList.remove('hidden');
+                } else {
+                    row.classList.add('hidden');
+                }
+            });
+        }
+    </script>
+</head>
+<body>
+    <h2>Calendario Académico 2024</h2>
+    <div class="filters">
+        <div class="filter-box">
+            <input type="checkbox" id="filter-events" class="checkbox-events" onclick="applyFilters()" checked>
+            <label for="filter-events" style="color: #4CAF50;">Eventos</label>
+        </div>
+        <div class="filter-box">
+            <input type="checkbox" id="filter-holidays" class="checkbox-holidays" onclick="applyFilters()" checked>
+            <label for="filter-holidays" style="color: #f44336;">Feriados</label>
+        </div>
+        <div class="filter-box">
+            <input type="checkbox" id="filter-important" class="checkbox-important" onclick="applyFilters()" checked>
+            <label for="filter-important" style="color: #FFEB3B;">Fechas Importantes</label>
+        </div>
+    </div>
+    <table>
+        <tbody>
+            <!-- Mayo -->
+            <tr class="month-header">
+                <td colspan="3">MAYO</td>
+            </tr>
+            <tr class="holiday">
+                <td>1</td>
+                <td colspan="2">Día del Trabajador</td>
+            </tr>
+            <tr class="event">
+                <td>2 al 31</td>
+                <td colspan="2">Llamado a exámenes sujeto al pedido de las Fac.</td>
+            </tr>
+            <tr class="event">
+                <td>15</td>
+                <td colspan="2">Día del Docente Universitario (Laborable)</td>
+            </tr>
+            <tr class="event">
+                <td>24</td>
+                <td colspan="2">Fiesta de María Auxiliadora</td>
+            </tr>
+            <tr class="holiday">
+                <td>25</td>
+                <td colspan="2">Día de la Revolución de Mayo</td>
+            </tr>
+
+            <!-- Junio -->
+            <tr class="month-header">
+                <td colspan="3">JUNIO</td>
+            </tr>
+            <tr class="event">
+                <td>3</td>
+                <td colspan="2">Límite entrega certificado de secundario concluido</td>
+            </tr>
+            <tr class="event">
+                <td>4</td>
+                <td colspan="2">Carga de regularidad 1º Cuatrimestre</td>
+            </tr>
+            <tr class="holiday">
+                <td>17</td>
+                <td colspan="2">Día Paso a la Inmortalidad de Güemes</td>
+            </tr>
+            <tr class="holiday">
+                <td>20</td>
+                <td colspan="2">Día Paso a la Inmortalidad del General Manuel Belgrano</td>
+            </tr>
+            <tr class="holiday">
+                <td>21</td>
+                <td colspan="2">Feriado con Fines Turísticos</td>
+            </tr>
+            <tr class="important">
+                <td>22</td>
+                <td colspan="2">Finalización 1º Cuatrimestre</td>
+            </tr>
+            <tr class="important">
+                <td>28</td>
+                <td colspan="2">Elecciones UNISAL 2024</td>
+            </tr>
+            <tr class="event">
+                <td>25</td>
+                <td colspan="2">Inicio Inscripción a exámenes finales</td>
+            </tr>
+
+            <!-- Julio -->
+            <tr class="month-header">
+                <td colspan="3">JULIO</td>
+            </tr>
+            <tr class="event">
+                <td>1</td>
+                <td colspan="2">Apertura inscripciones 2º cuatrimestre y 2025</td>
+            </tr>
+            <tr class="event">
+                <td>1</td>
+                <td colspan="2">Jul-Ago 1º llamado</td>
+            </tr>
+            <tr class="event">
+                <td>1</td>
+                <td colspan="2">Inscripción a Materias 2º Cuatrimestre (hasta 24 de agosto)</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>

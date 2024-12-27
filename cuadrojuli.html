@@ -6,27 +6,18 @@
     <title>Calendario Académico 2024</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
-            margin: 20px;
-            background-color: #f9f9f9;
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
         }
         h2 {
             text-align: center;
-            color: #333;
-        }
-        .filters {
-            display: flex;
-            justify-content: center;
-            margin-bottom: 20px;
-        }
-        .filter-box {
-            margin: 0 10px;
-            display: flex;
-            align-items: center;
-        }
-        .filter-box label {
-            margin-left: 5px;
-            font-weight: bold;
+            background-color: #2c3e50;
+            color: white;
+            padding: 15px 0;
+            margin: 0;
+            font-size: 24px;
         }
         .checkbox-events {
             accent-color: #38a934; /* Verde */
@@ -37,52 +28,81 @@
         .checkbox-academic {
             accent-color: #34a8e0; /* Celeste */
         }
-        table { width: 75%;
-        border-collapse: collapse;
-        margin-top: 20px;
-        margin-left: auto;
-        margin-right: auto;
+        .filters {
+            display: flex;
+            justify-content: center;
+            padding: 15px 0;
+            background-color: #ecf0f1;
+            border-bottom: 2px solid #bdc3c7;
+        }
+        .filter-box {
+            margin: 0 15px;
+            display: flex;
+            align-items: center;
+        }
+        .filter-box label {
+            margin-left: 5px;
+            font-weight: bold;
+            color: #2c3e50;
+        }
+        table {
+            width: 75%;
+            margin: 20px auto;
+            border-collapse: collapse;
+            background-color: white;
+            border: 1px solid #bdc3c7;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+            border: 1px solid #bdc3c7;
         }
         th {
-            background-color: #4CAF50;
+            background-color: #34495e;
             color: white;
-            text-align: left;
-            padding: 10px;
-        }
-        td {
-            padding: 10px;
-            text-align: left;
-            border: 1px solid #ddd;
-        }
-        .month-header {
-            background-color: #696258e8;
-            color: white;
-            font-weight: bold;
-            text-align: left;
-            padding: 10px;
-            border: 1px solid #ddd;
-        }
-        .holiday {
-            background-color: #de0513;
-            font-weight: bold;
+            text-align: center;
+            font-size: 18px;
         }
         .important {
-            background-color: #FFEB3B;
+            background-color: rgb(255, 255, 213);
+            color: rgb(177, 177, 0);
+            font-weight: bold;
+        }
+        .month-header {
+            background-color: #2c3e50;
+            color: white;
+            text-transform: uppercase;
+            font-weight: bold;
+            font-size: 16px;
+            text-align: center;
+        }
+        .holiday {
+            background-color: #ffd9c8;
+            color: #c0392b;
             font-weight: bold;
         }
         .academic {
-            background-color: #34a8e0;     
+            background-color: #d6eaf8;
+            color: #2874a6;
             font-weight: bold;
         }
         .event {
-            background-color: #38a934;     
+            background-color: #d5f5e3;
+            color: #1d8348;
             font-weight: bold;
+        }
+        /* Animación hover */
+        tr {
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+        tr:hover:not(.month-header) {
+            background-color: #3d3d3dde; /* Cambia el color */
+            transform: scale(1.02); /* Escala ligera */
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15); /* Sombra adicional */
         }
         .hidden {
             display: none;
-        }
-        .important.hidden {
-            display: table-row;
         }
     </style>
     <script>
@@ -119,20 +139,22 @@
     </script>
 </head>
 <body>
-    <h2>Calendario Académico 2025</h2>
+    <h2>Calendario Académico 2024</h2>
     <div class="filters">
+        <div class="filter-box">
+        <input type="checkbox" id="filter-academic" class="checkbox-academic" onclick="applyFilters()" checked>
+        <label for="filter-academic" style="color: #34a8e0;">Académico</label>
+    </div>
+    <div class="filter-box">
+        <input type="checkbox" id="filter-holidays" class="checkbox-holidays" onclick="applyFilters()" checked>
+        <label for="filter-holidays" style="color: #de0513;">Feriados</label>
+    </div>
         <div class="filter-box">
             <input type="checkbox" id="filter-events" class="checkbox-events" onclick="applyFilters()" checked>
             <label for="filter-events" style="color: #38a934;">Eventos</label>
         </div>
-        <div class="filter-box">
-            <input type="checkbox" id="filter-holidays" class="checkbox-holidays" onclick="applyFilters()" checked>
-            <label for="filter-holidays" style="color: #de0513;">Feriados</label>
-        </div>
-        <div class="filter-box">
-            <input type="checkbox" id="filter-academic" class="checkbox-academic" onclick="applyFilters()" checked>
-            <label for="filter-academic" style="color: #34a8e0;">Académico</label>
-        </div>
+        
+        
     </div>
     <table>
 

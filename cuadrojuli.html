@@ -110,37 +110,37 @@
         }
     </style>
     <script>
-        function applyFilters() {
-            const showEvents = document.getElementById('filter-events').checked;
-            const showHolidays = document.getElementById('filter-holidays').checked;
-            const showacademic = document.getElementById('filter-academic').checked;
+    function applyFilters() {
+        const showEvents = document.getElementById('filter-events').checked;
+        const showHolidays = document.getElementById('filter-holidays').checked;
+        const showacademic = document.getElementById('filter-academic').checked;
 
-            const rows = document.querySelectorAll('tr');
+        const rows = document.querySelectorAll('tr');
 
-            rows.forEach(row => {
-                // Always show month headers
-                if (row.classList.contains('month-header')) {
-                    row.classList.remove('hidden');
-                    return;
-                }
+        rows.forEach(row => {
+            // Always show month headers and important rows
+            if (row.classList.contains('month-header') || row.classList.contains('important')) {
+                row.classList.remove('hidden');
+                return;
+            }
 
-                // Show or hide rows based on selected filters
-                const isEvent = row.classList.contains('event');
-                const isHoliday = row.classList.contains('holiday');
-                const isacademic = row.classList.contains('academic');
+            // Show or hide rows based on selected filters
+            const isEvent = row.classList.contains('event');
+            const isHoliday = row.classList.contains('holiday');
+            const isacademic = row.classList.contains('academic');
 
-                if (
-                    (showEvents && isEvent) ||
-                    (showHolidays && isHoliday) ||
-                    (showacademic && isacademic)
-                ) {
-                    row.classList.remove('hidden');
-                } else {
-                    row.classList.add('hidden');
-                }
-            });
-        }
-    </script>
+            if (
+                (showEvents && isEvent) ||
+                (showHolidays && isHoliday) ||
+                (showacademic && isacademic)
+            ) {
+                row.classList.remove('hidden');
+            } else {
+                row.classList.add('hidden');
+            }
+        });
+    }
+</script>
 </head>
 <body>
     <h2>Calendario Académico 2024</h2>

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calendario Académico 2025</title>
+    <title>Calendario Académico 2024</title>
     <style>
         body {
             font-family: 'Arial', sans-serif;
@@ -64,12 +64,7 @@
             text-align: center;
             font-size: 18px;
         }
-        .important {
-            background-color: rgb(255, 255, 213);
-            /* color: rgb(177, 177, 0); */
-            color: black;
-            font-weight: bold;
-        }
+        
         .month-header {
             background-color: #2c3e50;
             color: white;
@@ -118,11 +113,11 @@
         const rows = document.querySelectorAll('tr');
 
         rows.forEach(row => {
-            // Always show month headers and important rows
-            if (row.classList.contains('month-header') || row.classList.contains('important')) {
-                row.classList.remove('hidden');
-                return;
-            }
+    // Always show month headers
+    if (row.classList.contains('month-header')) {
+        row.classList.remove('hidden');
+        return;
+    }
 
             // Show or hide rows based on selected filters
             const isEvent = row.classList.contains('event');
@@ -143,7 +138,7 @@
 </script>
 </head>
 <body>
-    <h2>Calendario Académico 2025</h2>
+    <h2>Calendario Académico 2024</h2>
     <div class="filters">
         <div class="filter-box">
         <input type="checkbox" id="filter-academic" class="checkbox-academic" onclick="applyFilters()" checked>
@@ -180,35 +175,38 @@
         
         <tr class="academic">
             <td>Desde 1</td>
-            <td colspan="2">Inscipción a exámenes finales</td>
-        </tr>
-        <tr class="academic">
-            <td>5 al 8</td>
-            <td colspan="2">Semana del Ingresante</td>
-        </tr>
-        <tr class="academic">
-            <td>5 y 7</td>
-            <td colspan="2">Reuniones con personal docente por facultades</td>
+            <td colspan="2">Inscripción a exámenes finales</td>
         </tr>
         <tr class="academic">
             <td>10 al 22</td>
-            <td colspan="2">Feb-Mzo 1º llamado</td>
+            <td colspan="2">Feb-Mzo 1º llamado Exámenes finales</td>
         </tr>
         <tr class="academic">
-            <td>12 al 15</td>
-            <td colspan="2">Inscripción a Materias 1º Cuatrimestre</td>
+            <td>11</td>
+            <td colspan="2">Reunión Consejo Académico Facultad de Psicología</td>
         </tr>
         <tr class="academic">
-            <td>15</td>
-            <td colspan="2">Pedido de Equivalencias 1º Cuatrimestre</td>
+            <td>10</td>
+            <td colspan="2">Pedido de Equivalencias 1º Cuatrimestre (hasta el 5 de Marzo)</td>
+        </tr>
+        <tr class="academic">
+            <td>20</td>
+            <td colspan="2">Reunión Consejo Académico Facultad Sociales</td>
         </tr>  
+        <!-- ??????? -->
         <tr class="academic">
-            <td>21 al 28</td>
-            <td colspan="2">Reuniones Consejo Superior</td>
+            <td>24</td>
+            <td colspan="2">Reunión Consejo Académico Facultad Sociales</td>
+        </tr>  
+        <!-- ??????? -->
+
+        <tr class="academic">
+            <td>28</td>
+            <td colspan="2">Reunión Consejo Superior</td>
         </tr>
         <tr class="academic">
             <td>24 al</td>
-            <td colspan="2">Feb-Mzo 2º llamado</td>
+            <td colspan="2">Feb-Mzo 2º llamado Exámenes finales - (hasta el 8 de Marzo)</td>
         </tr>
         
     
@@ -222,68 +220,49 @@
             <td>1 al 15</td>
             <td colspan="2">Inscripción a Materias 1º Cuatrimestre</td>
         </tr>
-        <tr class="academic">
-            <td>5 al 7</td>
-            <td colspan="2">Reuniones con personal docente por facultades</td>
+        
+        <tr class="holiday">
+            <td>3 y 4</td>
+            <td colspan="2">Carnaval</td>
         </tr>
         <tr class="academic">
             <td>5 al 8</td>
             <td colspan="2">Semana del Ingresante</td>
         </tr>
 
-        
         <tr class="academic">
-            <td>5</td>
-            <td colspan="2">Pedido de Equivalencias 1º Cuatrimestre</td>
+            <td>11</td>
+            <td colspan="2">Reunión Consejo Académico Facultad de Psicología</td>
         </tr>
-
-
+    
+          <tr class="academic">
+            <td>17</td>
+            <td colspan="2">Reunión Consejo Académico Facultad Sociales</td>
+        </tr>
         <tr class="academic">
-            <td>8</td>
-            <td colspan="2">Feb-Mzo 2º llamado</td>
-        </tr>
-        </tr> 
+            <td>10</td>
+            <td colspan="2">Inicio 1º Cuatrimestre - Comienzo de clases</td>
+        </tr>    
         <tr class="academic">
             <td>10 al 20</td>
             <td colspan="2">Primer llamado a solicitud de becas</td>
-        </tr>
-        <tr class="academic">
-            <td>11</td>
-            <td colspan="2">Reuniones Consejo Académico Facultad de Psicología</td>
-        </tr>
-        
+        </tr>    
         <tr class="academic">
             <td>15</td>
             <td colspan="2">Cierre de inscripciones 2025 sujeto a cupo</td>
         </tr>
-        
-          <tr class="academic">
-            <td>17</td>
-            <td colspan="2">Reuniones Consejo Académico Facultad Sociales</td>
-        </tr>
-
-        <tr class="academic">
-            <td>21</td>
-            <td colspan="2">Reuniones Consejo Académico Facultad Derecho</td>
+        <tr class="holiday">
+            <td>24</td>
+            <td colspan="2">Día Nacional de la Memoria por la Verdad y la Justicia</td>
         </tr>
 
         <tr class="academic">
             <td>24 al 29</td>
             <td colspan="2">Semana de la Memoria por la Verdad y la Justicia</td>
         </tr>
-        <tr class="important">
-            <td>10</td>
-            <td colspan="2">Inicio 1º Cuatrimestre</td>
-        <tr class="holiday">
-            <td>3 y 4</td>
-            <td colspan="2">Carnaval</td>
-        </tr>
+       
         
-        <tr class="holiday">
-            <td>24</td>
-            <td colspan="2">Día Nacional de la Memoria por la Verdad y la Justicia</td>
-        </tr>
-
+        
         
 
         
@@ -295,23 +274,23 @@
         <!-- Academic -->
          <tr class="academic">
             <td>1 al 30</td>
-            <td colspan="2">Llamado a exámenes sujeto al pedido de las Fac.</td>
+            <td colspan="2">Llamado a exámenes sujeto al pedido de las Facultades</td>
         </tr>
         <tr class="academic">
             <td>8</td>
-            <td colspan="2">Reuniones Consejo Académico Facultad de Psicología</td>
+            <td colspan="2">Reunión Consejo Académico Facultad de Psicología</td>
         </tr>
         <tr class="academic">
             <td>18</td>
-            <td colspan="2">Reuniones Consejo Académico Facultad Derecho</td>
+            <td colspan="2">Reunión Consejo Académico Facultad Derecho</td>
         </tr>
         <tr class="academic">
             <td>21</td>
-            <td colspan="2">Reuniones Consejo Académico Facultad Sociales</td>
+            <td colspan="2">Reunión Consejo Académico Facultad Sociales</td>
         </tr>
         <tr class="academic">
             <td>30</td>
-            <td colspan="2">Reuniones Consejo Superior</td>
+            <td colspan="2">Reunión Consejo Superior</td>
         </tr>
         
         <tr class="academic">
@@ -336,12 +315,26 @@
             <td>19</td>
             <td colspan="2">Sábado Santo</td>
         </tr>
+        <tr class="holiday">
+            <td>20</td>
+            <td colspan="2">Domingo de Pascua</td>
+        </tr>
 
 
         
         <!------------------------------------- MES ------------------------------------>
         <tr class="month-header">
             <td colspan="3">MAYO</td>
+        </tr>
+
+        <tr class="holiday">
+            <td>1</td>
+            <td colspan="2">Día del Trabajador</td>
+        </tr>
+        
+        <tr class="holiday">
+            <td>2 y 3</td>
+            <td colspan="2">Día no laborable con fines turísticos</td>
         </tr>
 
         <!-- Academic -->
@@ -351,26 +344,23 @@
         </tr>
         <tr class="academic">
             <td>13</td>
-            <td colspan="2">Reuniones Consejo Académico Facultad de Psicología</td>
+            <td colspan="2">Reunión Consejo Académico Facultad de Psicología</td>
         </tr>
         <tr class="academic">
             <td>19</td>
-            <td colspan="2">Reuniones Consejo Académico Facultad Sociales</td>
+            <td colspan="2">Reunión Consejo Académico Facultad Sociales</td>
+        </tr>
+        <tr class="event">
+            <td>19 al 22</td>
+            <td colspan="2">Congreso Misionero Salesiano Americano (Bs. As.)</td>
         </tr>
         <tr class="academic">
             <td>22</td>
-            <td colspan="2">Reuniones Consejo Académico Facultad Derecho</td>
+            <td colspan="2">Reunión Consejo Académico Facultad Derecho</td>
         </tr>
 
         <!-- Holiday -->
-        <tr class="holiday">
-            <td>1</td>
-            <td colspan="2">Día del Trabajador</td>
-        </tr>
-        <tr class="holiday">
-            <td>2 y 3</td>
-            <td colspan="2">Día no laborable con fines turísticos</td>
-        </tr>
+       
         <tr class="holiday">
             <td>24</td>
             <td colspan="2">Día de María Auxiliadora</td>
@@ -380,12 +370,6 @@
             <td colspan="2">Día de la Revolución de Mayo</td>
         </tr>
 
-        <!-- Event -->
-        <tr class="event">
-            <td>19 al 22</td>
-            <td colspan="2">Congreso Misionero Salesiano Americano (Bs. As.)</td>
-        </tr>
-
 
         <!------------------------------------- MES ------------------------------------>
         <tr class="month-header">
@@ -393,36 +377,33 @@
         </tr>
         
             <!-- Academic -->
-        <tr class="academic">
-            <td>9</td>
-            <td colspan="2">Reuniones Consejo Académico Facultad Sociales</td>
-        </tr>
+        
         <tr class="academic">
             <td>9</td>
             <td colspan="2">Límite entrega certificado de secundario concluido</td>
         </tr>
         <tr class="academic">
+            <td>9</td>
+            <td colspan="2">Reunión Consejo Académico Facultad Sociales</td>
+        </tr>
+        <tr class="academic">
             <td>10</td>
-            <td colspan="2">Reuniones Consejo Académico Facultad de Psicología</td>
+            <td colspan="2">Reunión Consejo Académico Facultad de Psicología</td>
         </tr>
         <tr class="academic">
             <td>19</td>
-            <td colspan="2">Reuniones Consejo Académico Facultad Derecho</td>
-        </tr>
-        <tr class="academic">
-            <td>27</td>
-            <td colspan="2">Reuniones Consejo Superior</td>
+            <td colspan="2">Reunión Consejo Académico Facultad Derecho</td>
         </tr>
         <tr class="academic">
             <td>hasta el 21</td>
             <td colspan="2">Carga de regularidad 1º Cuatrimestre</td>
         </tr>
         <tr class="academic">
-            <td>desde 30</td>
-            <td colspan="2">Inscripción a exámenes finales</td>
+            <td>27</td>
+            <td colspan="2">Reunión Consejo Superior</td>
         </tr>
-        <!-- Important -->
-        <tr class="important">
+        <!-- academic -->
+        <tr class="academic">
             <td>28</td>
             <td colspan="2">Finalización 1º Cuatrimestre</td>
         </tr>
@@ -434,6 +415,10 @@
         <tr class="holiday">
             <td>20</td>
             <td colspan="2">Día del Paso a la Inmortalidad del General Manuel Belgrano</td>
+        </tr>
+        <tr class="academic">
+            <td>30</td>
+            <td colspan="2">Inicio inscripción a exámenes finales</td>
         </tr>
 
         
@@ -450,34 +435,34 @@
         </tr>
         <tr class="academic">
             <td>1</td>
-            <td colspan="2">Pedido de Equivalencias 2º Cuatrimestre</td>
+            <td colspan="2">Pedido de Equivalencias 2º Cuatrimestre (hasta el 8 de agosto)</td>
         </tr>
         <tr class="academic">
             <td>3 al 19</td>
-            <td colspan="2">Jul-Ago 1º llamado</td>
+            <td colspan="2">Jul-Ago 1º llamado - Exámenes finales</td>
         </tr>
         <tr class="academic">
             <td>8</td>
-            <td colspan="2">Reuniones Consejo Académico Facultad de Psicología</td>
+            <td colspan="2">Reunión Consejo Académico Facultad de Psicología</td>
         </tr>
-        <tr class="academic">
-            <td>14</td>
-            <td colspan="2">Reuniones Consejo Académico Facultad Sociales</td>
-        </tr>
-        <tr class="academic">
-            <td>17</td>
-            <td colspan="2">Reuniones Consejo Académico Facultad Derecho</td>
-        </tr>
-        <tr class="academic">
-            <td>21</td>
-            <td colspan="2">Receso invernal</td>
-        </tr>
-
-        <!-- Holiday -->
         <tr class="holiday">
             <td>9</td>
             <td colspan="2">Día de la Independencia</td>
         </tr>
+        <tr class="academic">
+            <td>14</td>
+            <td colspan="2">Reunión Consejo Académico Facultad Sociales</td>
+        </tr>
+        <tr class="academic">
+            <td>17</td>
+            <td colspan="2">Reunión Consejo Académico Facultad Derecho</td>
+        </tr>
+        <tr class="holiday">
+            <td>21</td>
+            <td colspan="2">Receso invernal (hasta el 1 de agosto)</td>
+        </tr>
+
+        
 
         
         <!------------------------------------- MES ------------------------------------>
@@ -487,34 +472,17 @@
 
        <!-- Academic -->
         <tr class="academic">
-            <td>1</td>
-            <td colspan="2">Receso invernal</td>
+            <td>4 al 14</td>
+            <td colspan="2">Jul-Ago 2º llamado - Exámenes finales -</td>
         </tr>
-         <tr class="academic">
+        <tr class="academic">
             <td>4 al 12</td>
             <td colspan="2">Segundo llamado a solicitud de becas</td>
         </tr>
         <tr class="academic">
-            <td>4 al 14</td>
-            <td colspan="2">Jul-Ago 2º llamado</td>
-        </tr>
-        <tr class="academic">
             <td>7</td>
-            <td colspan="2">Reuniones Consejo Académico Facultad Derecho</td>
+            <td colspan="2">Reunión Consejo Académico Facultad Derecho</td>
         </tr>
-        <tr class="academic">
-            <td>8</td>
-            <td colspan="2">Pedido de Equivalencias 2º Cuatrimestre</td>
-        </tr>
-        <tr class="academic">
-            <td>12</td>
-            <td colspan="2">Reuniones Consejo Académico Facultad de Psicología</td>
-        </tr>
-        <tr class="academic">
-            <td>14</td>
-            <td colspan="2">Reuniones Consejo Superior</td>
-        </tr>
-       
         <tr class="academic">
             <td>11 al 13</td>
             <td colspan="2">Reunión con personal docente por facultades</td>
@@ -523,19 +491,15 @@
             <td>11 al 23</td>
             <td colspan="2">Inscripción a Materias 2º Cuatrimestre</td>
         </tr>
-
-        <!-- Important -->
-        <tr class="important">
-            <td>18</td>
-            <td colspan="2">Inicio 2º Cuatrimestre</td>
+        <tr class="academic">
+            <td>12</td>
+            <td colspan="2">Reunión Consejo Académico Facultad de Psicología</td>
         </tr>
-
-        <!-- Event -->
-        <tr class="event">
-            <td>23</td>
-            <td colspan="2">5ta Jornada Nacional de Gestión Educativa</td>
+        <tr class="academic">
+            <td>14</td>
+            <td colspan="2">Reunión Consejo Superior</td>
         </tr>
-
+       
         <!-- Holiday -->
         <tr class="holiday">
             <td>15</td>
@@ -549,6 +513,18 @@
             <td>17</td>
             <td colspan="2">Paso a la Inmortalidad del General José de San Martín</td>
         </tr>
+        <!-- imp -->
+        <tr class="academic">
+            <td>18</td>
+            <td colspan="2">Inicio 2º Cuatrimestre</td>
+        </tr>
+
+        <!-- Event -->
+        <tr class="event">
+            <td>23 y 24</td>
+            <td colspan="2">5ta Jornada Nacional de Gestión Educativa</td>
+        </tr>
+
 
 
                 
@@ -560,27 +536,27 @@
                 <!-- Academic -->
         <tr class="academic">
             <td>1 al 30</td>
-            <td colspan="2">Llamado a exámenes sujeto al pedido de las Fac.</td>
+            <td colspan="2">Llamado a exámenes sujeto al pedido de las Facultades</td>
         </tr>
-        <tr class="academic">
-            <td>8</td>
-            <td colspan="2">Reuniones Consejo Académico Facultad Sociales</td>
-        </tr>
-        <tr class="academic">
-            <td>9</td>
-            <td colspan="2">Reuniones Consejo Académico Facultad de Psicología</td>
-        </tr>
-        <tr class="academic">
-            <td>18</td>
-            <td colspan="2">Reuniones Consejo Académico Facultad Derecho</td>
-        </tr>
-        
-
         <!-- Event -->
         <tr class="event">
             <td>6</td>
             <td colspan="2">Inicio Torneo Recreativo - Deportivo</td>
         </tr>
+        <tr class="academic">
+            <td>8</td>
+            <td colspan="2">Reunión Consejo Académico Facultad Sociales</td>
+        </tr>
+        <tr class="academic">
+            <td>9</td>
+            <td colspan="2">Reunión Consejo Académico Facultad de Psicología</td>
+        </tr>
+        <tr class="academic">
+            <td>18</td>
+            <td colspan="2">Reunión Consejo Académico Facultad Derecho</td>
+        </tr>
+        
+
 
         <!-- Holiday -->
         <tr class="holiday">
@@ -606,19 +582,19 @@
         </tr>
         <tr class="academic">
             <td>6</td>
-            <td colspan="2">Reuniones Consejo Académico Facultad Sociales</td>
+            <td colspan="2">Reunión Consejo Académico Facultad Sociales</td>
         </tr>
         <tr class="academic">
             <td>9</td>
-            <td colspan="2">Reuniones Consejo Académico Facultad Derecho</td>
+            <td colspan="2">Reunión Consejo Académico Facultad Derecho</td>
         </tr>
         <tr class="academic">
             <td>14</td>
-            <td colspan="2">Reuniones Consejo Académico Facultad de Psicología</td>
+            <td colspan="2">Reunión Consejo Académico Facultad de Psicología</td>
         </tr>
         <tr class="academic">
             <td>17</td>
-            <td colspan="2">Reuniones Consejo Superior</td>
+            <td colspan="2">Reunión Consejo Superior</td>
         </tr>
 
         <!-- Holiday -->
@@ -634,43 +610,48 @@
         <!-- Academic -->
         <tr class="academic">
             <td>10</td>
-            <td colspan="2">Reuniones Consejo Académico Facultad Sociales</td>
+            <td colspan="2">Reunión Consejo Académico Facultad Sociales</td>
         </tr>
         <tr class="academic">
             <td>11</td>
-            <td colspan="2">Reuniones Consejo Académico Facultad de Psicología</td>
-        </tr>
-        <tr class="academic">
-            <td>20</td>
-            <td colspan="2">Reuniones Consejo Académico Facultad Derecho</td>
+            <td colspan="2">Reunión Consejo Académico Facultad de Psicología</td>
         </tr>
         <tr class="academic">
             <td>hasta el 15</td>
             <td colspan="2">Carga de regularidad 2º Cuatrimestre</td>
         </tr>
         <tr class="academic">
-            <td>desde 20</td>
+            <td>20</td>
             <td colspan="2">Inicio Inscripción a Exámenes</td>
+        </tr>
+        
+        <tr class="academic">
+            <td>20</td>
+            <td colspan="2">Reunión Consejo Académico Facultad Derecho</td>
         </tr>
         <tr class="academic">
             <td>27</td>
-            <td colspan="2">Nov-Dic 1º llamado</td>
+            <td colspan="2">Nov-Dic 1º llamado - Exámenes finales - (hasta el 13 de diciembre)</td>
         </tr>
 
-        <!-- Important -->
-        <tr class="important">
+        <!-- imp -->
+        <tr class="academic">
             <td>20</td>
             <td colspan="2">Finalización 2º Cuatrimestre</td>
         </tr>
 
         <!-- Holiday -->
         <tr class="holiday">
-            <td>21 y 22</td>
+            <td>21</td>
+            <td colspan="2">Día no laborable con fines turísticos</td>
+        </tr>
+        <tr class="holiday">
+            <td>22</td>
             <td colspan="2">Día no laborable con fines turísticos</td>
         </tr>
         <tr class="holiday">
             <td>24</td>
-            <td colspan="2">Día de la Soberanía Nacional (20/11)</td>
+            <td colspan="2"> Conmemoración Día Soberanía Nacional (20/11)</td>
         </tr>
 
                 
@@ -685,30 +666,27 @@
                 <!-- Academic -->
         <tr class="academic">
             <td>4</td>
-            <td colspan="2">Reuniones Consejo Académico Facultad Derecho</td>
+            <td colspan="2">Reunión Consejo Académico Facultad Derecho</td>
         </tr>
-        <tr class="academic">
-            <td>9</td>
-            <td colspan="2">Reuniones Consejo Académico Facultad de Psicología</td>
-        </tr>
-        <tr class="academic">
-            <td>12</td>
-            <td colspan="2">Reuniones Consejo Superior</td>
-        </tr>
-        <tr class="academic">
-            <td>13</td>
-            <td colspan="2">Nov-Dic 1º llamado</td>
-        </tr>
-        <tr class="academic">
-            <td>15 al 17</td>
-            <td colspan="2">Nov-Dic 2º llamado</td>
-        </tr>
-
-        <!-- Holiday -->
         <tr class="holiday">
             <td>8</td>
             <td colspan="2">Inmaculada Concepción de María</td>
         </tr>
+        <tr class="academic">
+            <td>9</td>
+            <td colspan="2">Reunión Consejo Académico Facultad de Psicología</td>
+        </tr>
+        <tr class="academic">
+            <td>12</td>
+            <td colspan="2">Reunión Consejo Superior</td>
+        </tr>
+        <tr class="academic">
+            <td>15 al 27</td>
+            <td colspan="2">Nov-Dic 2º llamado - Exámenes finales</td>
+        </tr>
+
+        <!-- Holiday -->
+        
         <tr class="holiday">
             <td>24</td>
             <td colspan="2">Nochebuena</td>
@@ -718,6 +696,20 @@
             <td colspan="2">Navidad</td>
         </tr>
 
+        
+        <tr class="month-header">
+            <td colspan="3">ENERO 2026</td>
+        </tr>
+
+                <!-- Academic -->
+        <tr class="holiday">
+            <td>1</td>
+            <td colspan="2">Año nuevo</td>
+        </tr>
+        <tr class="academic">
+            <td>2</td>
+            <td colspan="2">Receso festival</td>
+        </tr>
         </tbody>
     </table>
 </body>
